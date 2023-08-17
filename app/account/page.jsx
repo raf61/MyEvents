@@ -5,11 +5,12 @@ import { useState } from "react";
 import Link from "next/link";
 import BlackButton from "@/components/BlackButton";
 import { toast } from 'react-toastify'
+import { useRouter } from "next/navigation";
 
 
 
 export default function Account() {
-    
+    const router = useRouter()
     const {data:session, update} = useSession()
     const [changingAccountType, setChangingAccountType] = useState(false)
 
@@ -32,6 +33,8 @@ export default function Account() {
             }
             
             await update({...session, isEventManager:true})
+            router.push("/menu")
+            router.refresh()
         } catch (error) {
             setChangingAccountType(false)
             return toast.error("An unexpected error ocurred.")
