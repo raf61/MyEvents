@@ -42,7 +42,7 @@ export default async function Success({searchParams:{qty, event}}) {
   return (
     <main>
         <Container>
-            <div className="flex items-center justify-center h-[80vh]">
+            <div className="flex items-center p-5 justify-center h-[80vh]">
                 <div>
 
                 <h1 className="text-4xl text-center">

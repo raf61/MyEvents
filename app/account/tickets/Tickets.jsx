@@ -34,7 +34,7 @@ export default function Tickets({tickets: ticketPurchases}) {
                             <div className="min-w-0">
                                 <div>
                                     <abbr title={ticketPurchase.event.name} className="no-underline">
-                                        <span className="block truncate font-bold text-[12pt]">{ticketPurchase.event.name}</span>
+                                        <span onClick={() => alert(ticketPurchase?.event?.name)}  className="block truncate font-bold text-[12pt]">{ticketPurchase.event.name}</span>
                                     </abbr>
                                 </div>
                                 <div >
@@ -98,17 +98,17 @@ export default function Tickets({tickets: ticketPurchases}) {
         }}
         >
 
-            <div className={`flex z-40 relative justify-center h-[100%] items-center p-3`}>
+            <div className={`flex z-40 relative justify-center h-[100%] items-center`}>
                 <div>
                     <div>
-                        <span className="block truncate font-bold text-[12pt]">{currentTicketPurchase?.event?.name}</span>
-                        <span className="block truncate text-[11pt] text-blue-500 font-bold">{currentTicketPurchase?.ticket?.name}</span>
+                        <span onClick={() => alert(currentTicketPurchase?.event?.name)} title={currentTicketPurchase?.event?.name} className="block max-w-[16rem] w-[100%] truncate font-bold text-[12pt]">{currentTicketPurchase?.event?.name}</span>
+                        <span className="block truncate text-[11pt] max-w-[16rem] text-blue-500 font-bold">{currentTicketPurchase?.ticket?.name}</span>
                     </div>
                     <div>
                         <div className="w-[100%]">
                             <img src={ticketQRCode} className="w-[100%]" />
                         </div>
-                        <span className="text-sm">{currentTicketPurchase?.code}</span>
+                        <div className="text-sm text-center">{currentTicketPurchase?.code}</div>
                     </div>
                 </div>
             </div>  
