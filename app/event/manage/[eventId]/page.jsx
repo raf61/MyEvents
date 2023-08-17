@@ -39,7 +39,7 @@ export default async function ManageEvent({params: { eventId }}) {
   }
 
   return (
-    <main className="p-5">
+    <main className="p-8 pb-20">
       <Link className="absolute" href="/account/events">
         <BlackButton content="< Back"/>
       </Link>

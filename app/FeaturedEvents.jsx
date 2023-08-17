@@ -7,7 +7,9 @@ import { useEffect, useRef, useState } from 'react'
 const getFeaturedEvents = async () => {
     try {
         const API_BASEURL = process.env.API_BASEURL
-        let response = await fetch(`${API_BASEURL}/events/featured`)
+        let response = await fetch(`${API_BASEURL}/events/featured`, {
+            cache: "no-store"
+        })
         response = await response.json()
         if (response.ok){
             return response.events

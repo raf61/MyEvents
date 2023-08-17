@@ -42,10 +42,10 @@ export default async function Developer({params: {eventId}}) {
                         <div className="shadow-md border text-sm p-5 w-[100%] rounded-xl">
                             <p>In order to process the clients`s tickets on a large scale, you may need our API.</p>
                             <p>Tickets endpoint:</p>
-                            <p className="text-[10pt] mb-3 font-bold">{`${process.env.API_BASEURL}/events/${eventId}/client-tickets`}</p> 
+                            <p className="break-words text-[9pt] sm:text-[10pt] mb-3 font-bold">{`${process.env.API_BASEURL}/events/${eventId}/client-tickets`}</p> 
                             <p className="mb-3">This endpoint has support to pagination using <b>"page"</b> and <b>"limit"</b> query parameters.</p>
                             <p className="mb-3">You can only access it with your API key which must be sent in the request through the header "X-Event-Key". </p>
-                            <p><span className="text-blue-600 font-bold">API key: </span><span className="font-bold">{developerApiKey}</span></p>
+                            <p><span className="text-blue-600 font-bold">API key: </span><span className="font-bold text-[9pt] sm:text-md">{developerApiKey}</span></p>
                         </div>
                     </div>
 

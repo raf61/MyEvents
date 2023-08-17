@@ -73,6 +73,12 @@ export default function ManageTickets({originalTickets}) {
             <div className="grow max-w-[21rem]">
                 <h3 className="text-xl mb-3">Available ticket types</h3>
                 {
+                    !tickets || !tickets.length &&  
+                    <div>
+                        <p className="text-gray-600 mb-3">There are no ticket types.</p>
+                    </div>
+                }
+                {
                     tickets.map(ticket => (
                         <div key={ticket._id} className="px-3 py-1 mb-3 border flex rounded-xl shadow-md justify-between items-center">
                             <div className="min-w-0">

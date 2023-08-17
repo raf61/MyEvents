@@ -196,11 +196,12 @@ export default function ManagementArea() {
         onRequestClose={() => {
             handleCancel()            
         }}
+        className={""}
         contentLabel='Choose an image'
         style={{
             overlay:{},
             content:{
-                width:"30rem",
+                maxWidth:"30rem",
                 height: "60vh",
                 margin: 'auto',
                 padding: '0px',

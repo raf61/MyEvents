@@ -1,5 +1,4 @@
 import Event from "@/models/Event"
-import TicketPurchase from "@/models/TicketPurchase"
 import { connectToDB } from "@/utils/database"
 import { NextResponse } from "next/server"
 

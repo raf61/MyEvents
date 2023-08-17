@@ -83,7 +83,7 @@ export default function Tickets({tickets: ticketPurchases}) {
         onRequestClose={() => {
             handleCancel()            
         }}
-        contentLabel='Choose an image'
+        contentLabel='My ticket'
         style={{
             overlay:{},
             content:{
