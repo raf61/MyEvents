@@ -14,7 +14,8 @@ export const PUT = async (req, context) => {
         }
         await connectToDB()
         await User.updateOne({
-            _id: session.user.id,
+               _id: session.user.id
+        },{
             isEventManager: true
         })
 
@@ -22,6 +23,7 @@ export const PUT = async (req, context) => {
             ok:true
         })
     } catch (error) {
+        console.log(error)
         return NextResponse.json({
             ok:false,
             msg: "An unexpected error ocurred"
