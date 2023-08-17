@@ -57,7 +57,7 @@ export default function Account() {
                 session?.user && (
                     <div className="flex justify-center flex-wrap-reverse mb-52 gap-6">
                         <div className="w-[100%] max-w-xl">
-                            <section>
+                            <section className="px-6">
                                 <form action="" className="block">
                                     <div className="p-5 border border-gray-200 rounded-md mb-10 mt-0">
                                         <h3 className="font-bold mb-1">Name</h3>

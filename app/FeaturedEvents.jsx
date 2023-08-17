@@ -75,17 +75,17 @@ export default function FeaturedEvents() {
                                 <div className="flex max-w-[65rem] border-2 rounded">
                                     
                                     <div className='w-[100%] md:w-[65%]'>
-                                        <Link href={`${process.env.BASEURL}/event/${event.slug}/${event._id}`} target='_blank'>
+                                        <a href={`${process.env.BASEURL}/event/${event.slug}/${event._id}`} target='_blank'>
                                             <img className='rounded w-[100%] h-auto' src={event.image} />
-                                        </Link>
+                                        </a>
                                     </div>
 
                                     <div className='p-6 py-5 hidden md:block md:w-[38%]'>
                                         <p className='text-[1.5rem] uppercase line-clamp-3 mb-5'>{event.name}</p>
                                         <div className='flex justify-center'>
-                                            <Link className='w-[100%]' href={`${process.env.BASEURL}/event/${event.slug}/${event._id}`} target='_blank'>
+                                            <a className='w-[100%]' href={`${process.env.BASEURL}/event/${event.slug}/${event._id}`} target='_blank'>
                                                 <button className='rounded hover:text-white hover:border-blue-600 hover:bg-blue-500 duration-200 transition ease-in-out py-2 px-3 w-[100%] uppercase bg-white text-gray-700 border border-gray-700'>More details</button>
-                                            </Link>
+                                            </a>
                                         </div>
                                     </div>
 

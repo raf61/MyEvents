@@ -9,13 +9,6 @@ const stripe = new Stripe(process.env.STRIPE_API_KEY, {
 })
 
 
-
-export const GET = async (req) => {
-    return NextResponse.json({
-        ok:true
-    })
-}
-
 export const POST = async (req) => {
     const buf = await req.text()
     const sig = req.headers.get('stripe-signature')

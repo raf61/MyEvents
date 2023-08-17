@@ -11,6 +11,8 @@ import TicketPurchase from "@/models/TicketPurchase"
 const stripe = new Stripe(process.env.STRIPE_API_KEY, {
     apiVersion: '2022-11-15'
 })
+export const dynamic = "force-dynamic"
+
 export const GET = async (req) => {
     try{
         const session = await getServerSession(authOptions)

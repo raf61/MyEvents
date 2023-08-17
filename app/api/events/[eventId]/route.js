@@ -88,6 +88,8 @@ export const PUT = async (req, {params: {eventId}}) => {
     }
 }
 
+export const dynamic = "force-dynamic"
+
 export const GET = async (req, {params:{eventId}}) => {
     try{
 

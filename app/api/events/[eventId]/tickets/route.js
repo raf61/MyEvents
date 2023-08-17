@@ -4,6 +4,8 @@ import { connectToDB } from "@/utils/database"
 import { getServerSession } from "next-auth"
 import { NextResponse } from "next/server"
 
+export const dynamic = "force-dynamic"
+
 export const GET = async (req, {params:{ eventId }}) => {
     try{
 

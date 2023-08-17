@@ -4,6 +4,7 @@ import TicketPurchase from "@/models/TicketPurchase"
 import { NextResponse } from "next/server"
 import Event from "@/models/Event"
 import Ticket from "@/models/Ticket"
+export const dynamic = "force-dynamic"
 
 export const GET = async (req) => {
     try {

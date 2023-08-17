@@ -3,7 +3,7 @@ import { NextResponse } from "next/server"
 import Event from '@/models/Event'
 import TicketPurchase from "@/models/TicketPurchase"
 import { connectToDB } from "@/utils/database"
-
+export const revalidate = 2
 export const GET = async (req, {params:{ eventId }}) => {
     try{
         await connectToDB()

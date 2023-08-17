@@ -24,9 +24,9 @@ export default function EventControl({fetchedEvent}) {
                 {originalEvent.name}
             </h1>
             <p className="flex items-center gap-3">
-                <Link target="_blank" href={ticketsLink}>
+                <a target="_blank" href={ticketsLink}>
                     <span className="underline">Sales link</span> 
-                </Link>
+                </a>
                 <ShareLinkButton link={ticketsLink}/>
             </p>
         </div>

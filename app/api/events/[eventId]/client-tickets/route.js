@@ -3,6 +3,7 @@ import TicketPurchase from "@/models/TicketPurchase"
 import { NextResponse } from "next/server"
 import User from '@/models/User'
 import { connectToDB } from "@/utils/database"
+export const dynamic = "force-dynamic"
 
 export const GET = async (req, {params: {eventId}}) => {
     try {

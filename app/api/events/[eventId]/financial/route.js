@@ -5,7 +5,7 @@ import TicketPurchase from "@/models/TicketPurchase"
 import { getServerSession } from "next-auth"
 import { authOptions } from "@/app/api/auth/[...nextauth]/route"
 import { connectToDB } from "@/utils/database"
-
+export const dynamic = "force-dynamic"
 export const GET = async (req, {params:{ eventId }}) => {
     const session = await getServerSession(authOptions)
     if(!session?.user){
