@@ -1,6 +1,7 @@
 'use client'
 
 import Container from '@/layout/Container'
+import { shuffle } from '@/utils/shuffle'
 import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 
@@ -27,7 +28,7 @@ export default function FeaturedEvents() {
 
     useEffect(() => {
         (async () => {
-            setFeaturedEvents(await getFeaturedEvents())
+            setFeaturedEvents(shuffle(await getFeaturedEvents()))
         })()
     }, [])
 
